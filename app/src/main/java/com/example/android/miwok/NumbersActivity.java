@@ -47,24 +47,22 @@ public class NumbersActivity extends AppCompatActivity {
 
        LinearLayout rootView =(LinearLayout)findViewById(R.id.rootView);
 
-       int index =0;
+       //create the counter variable to keep track of index position
+       int index=0;
 
-       //Creating a new Object "TextView" and Storing it in a variable "wordView" who's dataType is TextView.(Context:this).
-       TextView wordView = new TextView(this);
-       wordView.setText(words.get(index));
-       rootView.addView(wordView);
 
-        index = index +1;
+       while (index<words.size()) {
+                 //Creating a new Object "TextView" and Storing it in a variable "wordView" who's dataType is TextView.(Context:this).
+                 TextView wordView = new TextView(this);
+                 wordView.setText(words.get(index));
+                 rootView.addView(wordView);
 
-        TextView wordView2 = new TextView(this);
-        wordView2.setText(words.get(index));
-        rootView.addView(wordView2);
+           //Update Counter Variable
+                      index++;
 
-        index = index +1;
+       }
 
-        TextView wordView3 = new TextView(this);
-        wordView3.setText(words.get(index));
-        rootView.addView(wordView3);
+
 
     }
 }
