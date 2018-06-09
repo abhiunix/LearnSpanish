@@ -48,17 +48,17 @@ public class NumbersActivity extends AppCompatActivity {
        LinearLayout rootView =(LinearLayout)findViewById(R.id.rootView);
 
        //create the counter variable to keep track of index position
-       int index=0;
 
-
-       while (index<words.size()) {
+        int index;
+       //For Loop
+        for(index=0;index<words.size();index++) {
                  //Creating a new Object "TextView" and Storing it in a variable "wordView" who's dataType is TextView.(Context:this).
                  TextView wordView = new TextView(this);
                  wordView.setText(words.get(index));
                  rootView.addView(wordView);
 
            //Update Counter Variable
-                      index++;
+
 
        }
 
