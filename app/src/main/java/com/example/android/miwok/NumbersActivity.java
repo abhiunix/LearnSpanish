@@ -37,16 +37,16 @@ public class NumbersActivity extends AppCompatActivity {
         //Create an ArrayList of Words.
 
         ArrayList<String> words = new ArrayList<String >();
-        words.add("one");
-        words.add("two");
-        words.add("three");
-        words.add("four");
-        words.add("five");
-        words.add("6");
-        words.add("seven");
-        words.add("eight");
-        words.add("nine");
-        words.add("ten");
+        words.add("One");
+        words.add("Two");
+        words.add("Three");
+        words.add("Four");
+        words.add("Five");
+        words.add("Six");
+        words.add("Seven");
+        words.add("Eight");
+        words.add("Nine");
+        words.add("Ten");
 
 
        //Create an {@link ArrayAdapter }, whose data source is a list of Strings.
@@ -61,14 +61,14 @@ public class NumbersActivity extends AppCompatActivity {
         //There should be a {@link ListView} with the view ID called list,
         //which is declared in activity_numbers.xml layout file.
 
-       GridView gridView =(GridView) findViewById(R.id.grid);
+       ListView listView =(ListView) findViewById(R.id.list);
 
        //Make the {@link ListView} use the {@link ArrayAdapter} we created above, so that the
         //{@link listView} will display the list items for each word in the list of words.
         //Do this by calling the setAdapter method on the {@link ListView} and pass in
         //1 Argument, which is the {@link ArrayAdapter} with the variable name itemsAdapter.
 
-        gridView.setAdapter(itemsAdapter);
+        listView.setAdapter(itemsAdapter);
 
        }
 

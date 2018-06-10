@@ -13,7 +13,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<GridView xmlns:android="http://schemas.android.com/apk/res/android"
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -24,8 +24,8 @@
     android:numColumns="2"
 
     android:orientation="vertical"
-    android:id="@+id/grid"
+    android:id="@+id/list"
     tools:context="com.example.android.miwok.NumbersActivity"
     tools:ignore="InvalidId">
 
-</GridView>
+</ListView>
