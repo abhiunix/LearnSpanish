@@ -12,14 +12,12 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Lutti"
-        android:id="@+id/lutti"
-
-        tools:Text="Lutti" />
+        android:id="@+id/miwok_text_view"
+        tools:text="Lutti" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:text="One"
-        android:id="@+id/one" />
+        android:id="@+id/default_text_view" />
 </LinearLayout>
