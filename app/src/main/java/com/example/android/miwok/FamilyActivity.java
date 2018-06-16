@@ -18,6 +18,7 @@ package com.example.android.miwok;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -27,66 +28,44 @@ public class FamilyActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_family);
+        setContentView(R.layout.word_list);
 
-       //Implementation of Simple ArrayList.
-        ArrayList<String> FamilyName = new ArrayList<String>();
+        //Create an ArrayList of Words(using word class).
 
-        FamilyName.add("Father");
-        FamilyName.add("Mother");
-        FamilyName.add("Sun");
-        FamilyName.add("Daughter");
-        FamilyName.add("Older Brother");
-        FamilyName.add("Younger Brother");
-        FamilyName.add("Older Sister");
-        FamilyName.add("Younger Sister");
-        FamilyName.add("Grand Mother");
-        FamilyName.add("Grand Father");
-
-        FamilyName.add("Father");
-        FamilyName.add("Mother");
-        FamilyName.add("Sun");
-        FamilyName.add("Daughter");
-        FamilyName.add("Older Brother");
-        FamilyName.add("Younger Brother");
-        FamilyName.add("Older Sister");
-        FamilyName.add("Younger Sister");
-        FamilyName.add("Grand Mother");
-        FamilyName.add("Grand Father");
-
-        FamilyName.add("Father");
-        FamilyName.add("Mother");
-        FamilyName.add("Sun");
-        FamilyName.add("Daughter");
-        FamilyName.add("Older Brother");
-        FamilyName.add("Younger Brother");
-        FamilyName.add("Older Sister");
-        FamilyName.add("Younger Sister");
-        FamilyName.add("Grand Mother");
-        FamilyName.add("Grand Father");
-
-        FamilyName.add("Father");
-        FamilyName.add("Mother");
-        FamilyName.add("Sun");
-        FamilyName.add("Daughter");
-        FamilyName.add("Older Brother");
-        FamilyName.add("Younger Brother");
-        FamilyName.add("Older Sister");
-        FamilyName.add("Younger Sister");
-        FamilyName.add("Grand Mother");
-        FamilyName.add("Grand Father");
+        ArrayList<Word> words = new ArrayList<Word>();
+        //words.add("One");
 
 
-        LinearLayout rootViewF =  (LinearLayout)findViewById(R.id.rootViewF);
+        words.add(new Word("Father","Padre"));
+        words.add(new Word("Mother","Madre"));
+        words.add(new Word("Son","hijo"));
+        words.add(new Word("Daughter","Hija"));
+        words.add(new Word("Older Brother","hermano mayor"));
+        words.add(new Word("Younger Brother","hermano más joven"));
+        words.add(new Word("Older Sister","hermana mayor"));
+        words.add(new Word("Younger Sister","hermana menor"));
+        words.add(new Word("GrandMother","abuela"));
+        words.add(new Word("GrandFather","abuelo"));
+        //Create an {@link ArrayAdapter }, whose data source is a list of Strings.
+        //The Adapter knows how to create layouts for the each items in the list, using the
+        //simple_list_item_1.xml layout resource defined in the android framework/
+        //this list item layout contains a single {@link TextView}, which the adapter will set to display
+        //a single word.
 
-        int index;
+        WordAdapter adapter = new WordAdapter(this, words);
 
-        for(index=0;index<40;index++) {
-            TextView familyView = new TextView(this);
+        //Find the {@link ListView} object in the view hierarchy of the {@link Activity}
+        //There should be a {@link ListView} with the view ID called list,
+        //which is declared in word_listyout file.
 
-            familyView.setText(FamilyName.get(index));
-            rootViewF.addView(familyView);
-        }
+        ListView listView =(ListView) findViewById(R.id.list);
+
+        //Make the {@link ListView} use the {@link ArrayAdapter} we created above, so that the
+        //{@link listView} will display the list items for each word in the list of words.
+        //Do this by calling the setAdapter method on the {@link ListView} and pass in
+        //1 Argument, which is the {@link ArrayAdapter} with the variable name itemsAdapter.
+
+        listView.setAdapter(adapter);
     }
 }
 

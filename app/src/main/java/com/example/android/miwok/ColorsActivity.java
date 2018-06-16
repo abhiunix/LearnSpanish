@@ -33,22 +33,21 @@ public class ColorsActivity extends AppCompatActivity {
         //words.add("One");
 
         //now add new " 'Word' object"(storing in variable w ) to the word list.
-        Word w = new Word("One","Lutti");
+        Word w = new Word("red","rojo");
         //adding that variable to the word list.
         words.add(w);
 
         //OR
 
         //words.add("Two");
-        words.add(new Word("yello","otiiko"));
-        words.add(new Word("Three","tolookosu"));
-        words.add(new Word("Four","oyyisa"));
-        words.add(new Word("Five","massokka"));
-        words.add(new Word("Six","temmokka"));
-        words.add(new Word("Seven","kenekaku"));
-        words.add(new Word("Eight","kawinta"));
-        words.add(new Word("Nine","wo’e"));
-        words.add(new Word("Ten","na’aacha"));
+        words.add(new Word("Green","verde"));
+        words.add(new Word("Brown","marrón"));
+        words.add(new Word("Gray","gris"));
+        words.add(new Word("black","negro"));
+        words.add(new Word("white","blanco"));
+        words.add(new Word("dusty yellow","amarillo polvoriento"));
+        words.add(new Word("mustard yellow","mostaza amarilla"));
+
 
         //Create an {@link ArrayAdapter }, whose data source is a list of Strings.
         //The Adapter knows how to create layouts for the each items in the list, using the

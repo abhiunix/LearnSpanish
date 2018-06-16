@@ -29,39 +29,52 @@ public class PhrasesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_phrases);
+        setContentView(R.layout.word_list);
 
-        //Implementation of Simple ArrayList.
-        ArrayList<String> PhraseName = new ArrayList<String>();
+        //Create an ArrayList of Words(using word class).
 
-        PhraseName.add("Where are you going?");
-        PhraseName.add("What is your name?");
-        PhraseName.add("My name is...");
-        PhraseName.add("How are you feeling?");
-        PhraseName.add("I’m feeling good.");
-        PhraseName.add("Are you coming?");
-        PhraseName.add("Yes, I’m coming.");
-        PhraseName.add("I’m coming.");
-        PhraseName.add("Let’s go.");
-        PhraseName.add("Come here.");
+        ArrayList<Word> words = new ArrayList<Word>();
+        //words.add("One");
 
-        PhraseName.add("Where are you going?");
-        PhraseName.add("What is your name?");
-        PhraseName.add("My name is...");
-        PhraseName.add("How are you feeling?");
-        PhraseName.add("I’m feeling good.");
-        PhraseName.add("Are you coming?");
-        PhraseName.add("Yes, I’m coming.");
-        PhraseName.add("I’m coming.");
-        PhraseName.add("Let’s go.");
-        PhraseName.add("Come here.");
+        //now add new " 'Word' object"(storing in variable w ) to the word list.
+        Word w = new Word("Where are you going?","¿A dónde vas?");
+        //adding that variable to the word list.
+        words.add(w);
+
+        //OR
+
+        //words.add("Two");
+        words.add(new Word("What is your name?","¿Cuál es su nombre?"));
+        words.add(new Word("My name is...","Me llamo..."));
+        words.add(new Word("How are you feeling?","¿Como te sientes?"));
+        words.add(new Word("I’m feeling good.","Me siento bien."));
+        words.add(new Word("Are you coming?","¿Vienes?"));
+        words.add(new Word("Yes, I’m coming.","Si, voy para allá."));
+        words.add(new Word("I’m coming","Ya voy"));
+        words.add(new Word("Let’s go.","Vamonos"));
+        words.add(new Word("Come here.","Ven aca."));
 
 
-        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,PhraseName);
+        //Create an {@link ArrayAdapter }, whose data source is a list of Strings.
+        //The Adapter knows how to create layouts for the each items in the list, using the
+        //simple_list_item_1.xml layout resource defined in the android framework/
+        //this list item layout contains a single {@link TextView}, which the adapter will set to display
+        //a single word.
 
-        ListView listView = (ListView)findViewById(R.id.list);
+        WordAdapter adapter = new WordAdapter(this, words);
 
-        listView.setAdapter(itemsAdapter);
+        //Find the {@link ListView} object in the view hierarchy of the {@link Activity}
+        //There should be a {@link ListView} with the view ID called list,
+        //which is declared in word_listyout file.
+
+        ListView listView =(ListView) findViewById(R.id.list);
+
+        //Make the {@link ListView} use the {@link ArrayAdapter} we created above, so that the
+        //{@link listView} will display the list items for each word in the list of words.
+        //Do this by calling the setAdapter method on the {@link ListView} and pass in
+        //1 Argument, which is the {@link ArrayAdapter} with the variable name itemsAdapter.
+
+        listView.setAdapter(adapter);
 
     }
 }

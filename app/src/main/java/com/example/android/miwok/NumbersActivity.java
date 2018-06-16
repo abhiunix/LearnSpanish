@@ -34,22 +34,22 @@ public class NumbersActivity extends AppCompatActivity {
         //words.add("One");
 
         //now add new " 'Word' object"(storing in variable w ) to the word list.
-        Word w = new Word("One","Lutti");
+        Word w = new Word("One","uno");
         //adding that variable to the word list.
         words.add(w);
 
         //OR
 
         //words.add("Two");
-        words.add(new Word("Two","otiiko"));
-        words.add(new Word("Three","tolookosu"));
-        words.add(new Word("Four","oyyisa"));
-        words.add(new Word("Five","massokka"));
-        words.add(new Word("Six","temmokka"));
-        words.add(new Word("Seven","kenekaku"));
-        words.add(new Word("Eight","kawinta"));
-        words.add(new Word("Nine","wo’e"));
-        words.add(new Word("Ten","na’aacha"));
+        words.add(new Word("Two","dos"));
+        words.add(new Word("Three","Tres"));
+        words.add(new Word("Four","las cuatro"));
+        words.add(new Word("Five","cinco"));
+        words.add(new Word("Six","seis"));
+        words.add(new Word("Seven","siete"));
+        words.add(new Word("Eight","ocho"));
+        words.add(new Word("Nine","nueve"));
+        words.add(new Word("Ten","diez"));
 
        //Create an {@link ArrayAdapter }, whose data source is a list of Strings.
         //The Adapter knows how to create layouts for the each items in the list, using the
