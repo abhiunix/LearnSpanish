@@ -17,6 +17,12 @@ package com.example.android.miwok;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import java.util.ArrayList;
 
 public class PhrasesActivity extends AppCompatActivity {
 
@@ -24,5 +30,38 @@ public class PhrasesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phrases);
+
+        //Implementation of Simple ArrayList.
+        ArrayList<String> PhraseName = new ArrayList<String>();
+
+        PhraseName.add("Where are you going?");
+        PhraseName.add("What is your name?");
+        PhraseName.add("My name is...");
+        PhraseName.add("How are you feeling?");
+        PhraseName.add("I’m feeling good.");
+        PhraseName.add("Are you coming?");
+        PhraseName.add("Yes, I’m coming.");
+        PhraseName.add("I’m coming.");
+        PhraseName.add("Let’s go.");
+        PhraseName.add("Come here.");
+
+        PhraseName.add("Where are you going?");
+        PhraseName.add("What is your name?");
+        PhraseName.add("My name is...");
+        PhraseName.add("How are you feeling?");
+        PhraseName.add("I’m feeling good.");
+        PhraseName.add("Are you coming?");
+        PhraseName.add("Yes, I’m coming.");
+        PhraseName.add("I’m coming.");
+        PhraseName.add("Let’s go.");
+        PhraseName.add("Come here.");
+
+
+        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,PhraseName);
+
+        ListView listView = (ListView)findViewById(R.id.list);
+
+        listView.setAdapter(itemsAdapter);
+
     }
 }

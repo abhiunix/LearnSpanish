@@ -25,7 +25,7 @@
 
     android:orientation="vertical"
     android:id="@+id/list"
-    tools:context="com.example.android.miwok.NumbersActivity"
+
     tools:ignore="InvalidId">
 
 

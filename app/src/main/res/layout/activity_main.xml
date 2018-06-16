@@ -13,7 +13,14 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<LinearLayout
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.portraitvlandscape.MainActivity" >
+
+    <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -34,20 +41,21 @@
         style="@style/CategoryStyle"
         android:background="@color/category_family"
         android:text="@string/category_family"
-        android:onClick="OpenFamilyList"/>
+        />
 
     <TextView
         android:id="@+id/colors"
         style="@style/CategoryStyle"
         android:background="@color/category_colors"
         android:text="@string/category_colors"
-        android:onClick="openColorsList"/>
+        />
 
     <TextView
         android:id="@+id/phrases"
         style="@style/CategoryStyle"
         android:background="@color/category_phrases"
         android:text="@string/category_phrases"
-        android:onClick="openPhrasesList"/>
+       />
 
 </LinearLayout>
+</ScrollView>

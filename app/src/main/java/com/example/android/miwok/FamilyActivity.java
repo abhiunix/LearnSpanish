@@ -17,6 +17,10 @@ package com.example.android.miwok;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import java.util.ArrayList;
 
 public class FamilyActivity extends AppCompatActivity {
 
@@ -24,5 +28,65 @@ public class FamilyActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_family);
+
+       //Implementation of Simple ArrayList.
+        ArrayList<String> FamilyName = new ArrayList<String>();
+
+        FamilyName.add("Father");
+        FamilyName.add("Mother");
+        FamilyName.add("Sun");
+        FamilyName.add("Daughter");
+        FamilyName.add("Older Brother");
+        FamilyName.add("Younger Brother");
+        FamilyName.add("Older Sister");
+        FamilyName.add("Younger Sister");
+        FamilyName.add("Grand Mother");
+        FamilyName.add("Grand Father");
+
+        FamilyName.add("Father");
+        FamilyName.add("Mother");
+        FamilyName.add("Sun");
+        FamilyName.add("Daughter");
+        FamilyName.add("Older Brother");
+        FamilyName.add("Younger Brother");
+        FamilyName.add("Older Sister");
+        FamilyName.add("Younger Sister");
+        FamilyName.add("Grand Mother");
+        FamilyName.add("Grand Father");
+
+        FamilyName.add("Father");
+        FamilyName.add("Mother");
+        FamilyName.add("Sun");
+        FamilyName.add("Daughter");
+        FamilyName.add("Older Brother");
+        FamilyName.add("Younger Brother");
+        FamilyName.add("Older Sister");
+        FamilyName.add("Younger Sister");
+        FamilyName.add("Grand Mother");
+        FamilyName.add("Grand Father");
+
+        FamilyName.add("Father");
+        FamilyName.add("Mother");
+        FamilyName.add("Sun");
+        FamilyName.add("Daughter");
+        FamilyName.add("Older Brother");
+        FamilyName.add("Younger Brother");
+        FamilyName.add("Older Sister");
+        FamilyName.add("Younger Sister");
+        FamilyName.add("Grand Mother");
+        FamilyName.add("Grand Father");
+
+
+        LinearLayout rootViewF =  (LinearLayout)findViewById(R.id.rootViewF);
+
+        int index;
+
+        for(index=0;index<40;index++) {
+            TextView familyView = new TextView(this);
+
+            familyView.setText(FamilyName.get(index));
+            rootViewF.addView(familyView);
+        }
     }
 }
+
