@@ -33,23 +33,17 @@ public class NumbersActivity extends AppCompatActivity {
         ArrayList<Word> words = new ArrayList<Word>();
         //words.add("One");
 
-        //now add new " 'Word' object"(storing in variable w ) to the word list.
-        Word w = new Word("One","uno");
-        //adding that variable to the word list.
-        words.add(w);
 
-        //OR
-
-        //words.add("Two");
-        words.add(new Word("Two","dos"));
-        words.add(new Word("Three","Tres"));
-        words.add(new Word("Four","las cuatro"));
-        words.add(new Word("Five","cinco"));
-        words.add(new Word("Six","seis"));
-        words.add(new Word("Seven","siete"));
-        words.add(new Word("Eight","ocho"));
-        words.add(new Word("Nine","nueve"));
-        words.add(new Word("Ten","diez"));
+        words.add(new Word("one","dos",R.drawable.number_one));
+        words.add(new Word("Two","dos",R.drawable.number_two));
+        words.add(new Word("Three","Tres",R.drawable.number_three));
+        words.add(new Word("Four","las cuatro",R.drawable.number_four));
+        words.add(new Word("Five","cinco",R.drawable.number_five));
+        words.add(new Word("Six","seis",R.drawable.number_six));
+        words.add(new Word("Seven","siete",R.drawable.number_seven));
+        words.add(new Word("Eight","ocho",R.drawable.number_eight));
+        words.add(new Word("Nine","nueve",R.drawable.number_nine));
+        words.add(new Word("Ten","diez",R.drawable.number_ten));
 
        //Create an {@link ArrayAdapter }, whose data source is a list of Strings.
         //The Adapter knows how to create layouts for the each items in the list, using the
