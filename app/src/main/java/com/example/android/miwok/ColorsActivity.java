@@ -30,23 +30,14 @@ public class ColorsActivity extends AppCompatActivity {
         //Create an ArrayList of Words(using word class).
 
         ArrayList<Word> words = new ArrayList<Word>();
-        //words.add("One");
-
-        //now add new " 'Word' object"(storing in variable w ) to the word list.
-        Word w = new Word("red","rojo");
-        //adding that variable to the word list.
-        words.add(w);
-
-        //OR
-
-        //words.add("Two");
-        words.add(new Word("Green","verde"));
-        words.add(new Word("Brown","marrón"));
-        words.add(new Word("Gray","gris"));
-        words.add(new Word("black","negro"));
-        words.add(new Word("white","blanco"));
-        words.add(new Word("dusty yellow","amarillo polvoriento"));
-        words.add(new Word("mustard yellow","mostaza amarilla"));
+        words.add(new Word("Red","rojo",R.drawable.color_red));
+        words.add(new Word("Green","verde",R.drawable.color_green));
+        words.add(new Word("Brown","marrón",R.drawable.color_brown));
+        words.add(new Word("Gray","gris",R.drawable.color_gray));
+        words.add(new Word("black","negro",R.drawable.color_black));
+        words.add(new Word("white","blanco",R.drawable.color_white));
+        words.add(new Word("dusty yellow","amarillo polvoriento",R.drawable.color_dusty_yellow));
+        words.add(new Word("mustard yellow","mostaza amarilla",R.drawable.color_mustard_yellow));
 
 
         //Create an {@link ArrayAdapter }, whose data source is a list of Strings.

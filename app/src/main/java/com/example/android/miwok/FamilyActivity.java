@@ -36,16 +36,16 @@ public class FamilyActivity extends AppCompatActivity {
         //words.add("One");
 
 
-        words.add(new Word("Father","Padre"));
-        words.add(new Word("Mother","Madre"));
-        words.add(new Word("Son","hijo"));
-        words.add(new Word("Daughter","Hija"));
-        words.add(new Word("Older Brother","hermano mayor"));
-        words.add(new Word("Younger Brother","hermano más joven"));
-        words.add(new Word("Older Sister","hermana mayor"));
-        words.add(new Word("Younger Sister","hermana menor"));
-        words.add(new Word("GrandMother","abuela"));
-        words.add(new Word("GrandFather","abuelo"));
+        words.add(new Word("Father","Padre",R.drawable.family_father));
+        words.add(new Word("Mother","Madre",R.drawable.family_mother));
+        words.add(new Word("Son","hijo",R.drawable.family_son));
+        words.add(new Word("Daughter","Hija",R.drawable.family_daughter));
+        words.add(new Word("Older Brother","hermano mayor",R.drawable.family_older_brother));
+        words.add(new Word("Younger Brother","hermano más joven",R.drawable.family_younger_brother));
+        words.add(new Word("Older Sister","hermana mayor",R.drawable.family_older_sister));
+        words.add(new Word("Younger Sister","hermana menor",R.drawable.family_younger_sister));
+        words.add(new Word("GrandMother","abuela",R.drawable.family_grandmother));
+        words.add(new Word("GrandFather","abuelo",R.drawable.family_grandfather));
         //Create an {@link ArrayAdapter }, whose data source is a list of Strings.
         //The Adapter knows how to create layouts for the each items in the list, using the
         //simple_list_item_1.xml layout resource defined in the android framework/
